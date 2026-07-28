@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberpunk RED Lifepath Reference</title>
+
+    <style>
+        body {
+            background-color: #05070b;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #FF0000;
+            border-bottom: 2px solid #FF0000;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            background: #1c1c1c;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #222;
+            color: #FF0000;
+        }
+
+        tr:nth-child(even) {
+            background-color: #181818;
+        }
+
+        button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            margin-right: 8px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #ff4f80;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #00e5ff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 20px;
+        }
+
+        /* Sections with 3+ column tables span the full grid width */
+        .section.wide {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Cyberpunk RED Lifepath Reference</h1>
+
+<p>
+    Use this page as a quick reference while creating your character.
+    Roll the dice and reference the tables below.
+</p>
+
+<div class="grid">
+
+    <!-- Cultural Origins -->
+    <div class="section wide">
+        <h2>Cultural Origins - CPR:Core p.45</h2>
+
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('culture', 10)">Roll 1D10</button> -->
+        <!-- <div id="culture" class="result"></div> -->
+
+        <table>
+            <tr><th>Roll</th><th>Your Cultural Origin</th><th>Language You Might Know (pick one)</th></tr>
+            <tr><td>1</td><td>North American</td><td>Chinese, Cree, Creole, English, French, Navajo, Spanish</td></tr>
+            <tr><td>2</td><td>South/Central American</td><td>Creole, English, German, Guarani, Mayan, Portuguese, Quechua, Spanish</td></tr>
+            <tr><td>3</td><td>Western European</td><td>Dutch, English, French, German, Italian, Norwegian, Portuguese, Spanish</td></tr>
+            <tr><td>4</td><td>Eastern European</td><td>English, Finnish, Polish, Romanian, Russian, Ukrainian</td></tr>
+            <tr><td>5</td><td>Middle Eastern/North African</td><td>Arabic, Berber, English, Farsi, French, Hebrew, Turkish</td></tr>
+            <tr><td>6</td><td>Sub-Saharan African</td><td>Arabic, English, French, Hausa, Lingala, Oromo, Portuguese, Swahili, Twi, Yoruba</td></tr>
+            <tr><td>7</td><td>South Asian</td><td>Bengali, Dari, English, Hindi, Nepali, Sinhalese, Tamil, Urdu</td></tr>
+            <tr><td>8</td><td>South East Asian</td><td>Arabic, Burmese, English, Filipino, Hindi, Indonesian, Khmer, Malayan, Vietnamese</td></tr>
+            <tr><td>9</td><td>East Asian</td><td>Cantonese Chinese, English, Japanese, Korean, Mandarin Chinese, Mongolian</td></tr>
+            <tr><td>10</td><td>Ocean/Pacific Islander</td><td>English, French, Hawaiian, Maori, Pama-Nyungan, Tahitian</td></tr>
+        </table>
+    </div>
+
+    <!-- Personality -->
+    <div class="section">
+        <h2>Your Personality - CPR:Core p.46</h2>
+
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('personality', 10)">Roll 1D10</button> -->
+        <!-- <div id="personality" class="result"></div> -->
+
+        <table>
+            <tr><th>Roll</th><th>What Are You Like?</th></tr>
+            <tr><td>1</td><td>Shy and secretive</td></tr>
+            <tr><td>2</td><td>Rebellious, antisocial, and violent</td></tr>
+            <tr><td>3</td><td>Arrogant, proud, and aloof</td></tr>
+            <tr><td>4</td><td>Moody, rash, and headstrong</td></tr>
+            <tr><td>5</td><td>Picky, fussy, and nervous</td></tr>
+            <tr><td>6</td><td>Stable and serious</td></tr>
+            <tr><td>7</td><td>Silly and fluff-headed</td></tr>
+            <tr><td>8</td><td>Sneaky and deceptive</td></tr>
+            <tr><td>9</td><td>Intellectual and detached</td></tr>
+            <tr><td>10</td><td>Friendly and outgoing</td></tr>
+        </table>
+    </div>
+
+    <!-- Clothing Style -->
+    <div class="section wide">
+        <h2>Dress and Personal Style - CPR:Core p.47</h2>
+
+        <button>Roll 1D10 (for each column)</button>
+        <!-- <button onclick="roll('clothing', 10)">Roll 1D10</button> -->
+        <!-- <div id="clothing" class="result"></div> -->
+
+        <table>
+            <tr><th>Roll</th><th>Clothing Style</th><th>Hairstyle</th></tr>
+            <tr><td>1</td><td>Generic Chic (Standard, Colorful, Modular)</td><td>Mohawk</td></tr>
+            <tr><td>2</td><td>Leisurewear (Comfort, Agility, Athleticism)</td><td>Long and ratty</td></tr>
+            <tr><td>3</td><td>Urban Flash (Flashy, Technological, Streetwear)</td><td>Short and spiked</td></tr>
+            <tr><td>4</td><td>Businesswear (Leadership, Presence, Authority)</td><td>Wild and all over</td></tr>
+            <tr><td>5</td><td>High Fashion (Exclusive, Designer, Couture)</td><td>Bald</td></tr>
+            <tr><td>6</td><td>Bohemian (Folksy, Retro, Free-spirited)</td><td>Striped</td></tr>
+            <tr><td>7</td><td>Bag Lady Chic (Homeless, Ragged, Vagrant)</td><td>Wild colors</td></tr>
+            <tr><td>8</td><td>Gang Colors (Dangerous, Violent, Rebellious)</td><td>Neat and short</td></tr>
+            <tr><td>9</td><td>Nomad Leathers (Western, Rugged, Tribal)</td><td>Short and curly</td></tr>
+            <tr><td>10</td><td>Asia Pop (Bright, Costume-like, Youthful)</td><td>Long and straight</td></tr>
+        </table>
+    </div>
+
+    <!-- Affectation -->
+    <div class="section">
+        <h2>Dress and Personal Style - CPR:Core p.47</h2>
+
+        <button>Roll 1D10</button>
+
+        <table>
+            <tr><th>Roll</th><th>Affectation You Are Never Without</th></tr>
+            <tr><td>1</td><td>Tattoos</td></tr>
+            <tr><td>2</td><td>Mirrorshades</td></tr>
+            <tr><td>3</td><td>Ritual scars</td></tr>
+            <tr><td>4</td><td>Spiked gloves</td></tr>
+            <tr><td>5</td><td>Nose rings</td></tr>
+            <tr><td>6</td><td>Tongue or other piercings</td></tr>
+            <tr><td>7</td><td>Strange fingernail implants</td></tr>
+            <tr><td>8</td><td>Spiked boots or heels</td></tr>
+            <tr><td>9</td><td>Fingerless gloves</td></tr>
+            <tr><td>10</td><td>Strange contacts</td></tr>
+        </table>
+    </div>
+
+    <!-- Motivations and Relationships -->
+    <div class="section wide">
+        <h2>Your Motivations and Relationships - CPR:Core p.48</h2>
+
+        <button>Roll 1D10 (for each column)</button>
+        <!-- <button onclick="roll('motivation', 10)">Roll 1D10</button> -->
+        <!-- <div id="motivation" class="result"></div> -->
+
+        <table>
+            <tr><th>Roll</th><th>What Do You Value Most?</th><th>How Do You Feel About Most People?</th></tr>
+            <tr><td>1</td><td>Money</td><td>I stay neutral</td></tr>
+            <tr><td>2</td><td>Honor</td><td>I stay neutral</td></tr>
+            <tr><td>3</td><td>Your word</td><td>I like almost everyone</td></tr>
+            <tr><td>4</td><td>Honesty</td><td>I like almost everyone</td></tr>
+            <tr><td>5</td><td>Knowledge</td><td>People are tools. Use them for your own goals then discard them</td></tr>
+            <tr><td>6</td><td>Vengeance</td><td>Every person is a valuable individual</td></tr>
+            <tr><td>7</td><td>Love</td><td>People are obstacles to be destroyed if they cross me.</td></tr>
+            <tr><td>8</td><td>Power</td><td>People are untrustworthy. Don't depend on anyone.</td></tr>
+            <tr><td>9</td><td>Family</td><td>Wipe 'em all out and let the cockroaches take over.</td></tr>
+            <tr><td>10</td><td>Friendship</td><td>People are wonderful!</td></tr>
+        </table>
+    </div>
+
+    <!-- Most Valued Person -->
+    <div class="section">
+        <h2>Things You Value the Most? - CPR:Core p.48</h2>
+
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('motivation', 10)">Roll 1D10</button> -->
+        <!-- <div id="motivation" class="result"></div> -->
+
+        <table>
+            <tr><th>Roll</th><th>Most Valued Person in Your Life?</th></tr>
+            <tr><td>1</td><td>A parent</td></tr>
+            <tr><td>2</td><td>A brother or sister</td></tr>
+            <tr><td>3</td><td>A lover</td></tr>
+            <tr><td>4</td><td>A friend</td></tr>
+            <tr><td>5</td><td>Yourself</td></tr>
+            <tr><td>6</td><td>A pet</td></tr>
+            <tr><td>7</td><td>A teacher or mentor</td></tr>
+            <tr><td>8</td><td>A public figure</td></tr>
+            <tr><td>9</td><td>A personal hero</td></tr>
+            <tr><td>10</td><td>No one</td></tr>
+        </table>
+    </div>
+
+    <!-- Most Valued Possession -->
+    <div class="section">
+        <h2>Things You Value the Most? - CPR:Core p.48</h2>
+
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('motivation', 10)">Roll 1D10</button> -->
+        <!-- <div id="motivation" class="result"></div> -->
+
+        <table>
+            <tr><th>Roll</th><th>Most Valued Possession You Own?</th></tr>
+            <tr><td>1</td><td>A weapon</td></tr>
+            <tr><td>2</td><td>A tool</td></tr>
+            <tr><td>3</td><td>A piece of clothing</td></tr>
+            <tr><td>4</td><td>A photograph</td></tr>
+            <tr><td>5</td><td>A book or diary</td></tr>
+            <tr><td>6</td><td>A recording</td></tr>
+            <tr><td>7</td><td>A musical instrument</td></tr>
+            <tr><td>8</td><td>A piece of jewelry</td></tr>
+            <tr><td>9</td><td>A toy</td></tr>
+            <tr><td>10</td><td>A letter</td></tr>
+        </table>
+    </div>
+
+    <!-- Family Background -->
+    <div class="section">
+        <h2>Your Original Family Background - CPR:Core p.49</h2>
+
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('family', 10)">Roll 1D10</button> -->
+        <!-- <div id="family" class="result"></div> -->
+
+        <table>
+            <tr><th>Roll</th><th>Original Background (see CPR:Core for detailed descriptions)</th></tr>
+            <tr><td>1</td><td>Corporate Execs</td></tr>
+            <tr><td>2</td><td>Corporate Managers</td></tr>
+            <tr><td>3</td><td>Corporate Technicians</td></tr>
+            <tr><td>4</td><td>Nomad Pack</td></tr>
+            <tr><td>5</td><td>Ganger "Family"</td></tr>
+            <tr><td>6</td><td>Combat Zoners</td></tr>
+            <tr><td>7</td><td>Urban Homeless</td></tr>
+            <tr><td>8</td><td>Megastructure Warren Rats</td></tr>
+            <tr><td>9</td><td>Reclaimers</td></tr>
+            <tr><td>10</td><td>Edgerunners</td></tr>
+        </table>
+    </div>
+
+    <!-- Childhood Environment -->
+    <div class="section">
+        <h2>Your Environment - CPR:Core p.50</h2>
+
+        <button>Roll 1D10</button>
+
+        <table>
+            <tr><th>Roll</th><th>Childhood Environment</th></tr>
+            <tr><td>1</td><td>Ran on The Street, with no adult supervision</td></tr>
+            <tr><td>2</td><td>Spent in a safe Corp Zone walled off from the rest of the City.</td></tr>
+            <tr><td>3</td><td>In a Nomad pack moving from place to place.</td></tr>
+            <tr><td>4</td><td>In a Nomad pack with roots in transport (ships, planes, caravans).</td></tr>
+            <tr><td>5</td><td>In a decaying, once upscale neighborhood, now holding off the boosters to survive.</td></tr>
+            <tr><td>6</td><td>In the heart of the Combat Zone, living in a wrecked building or other squat.</td></tr>
+            <tr><td>7</td><td>In a huge "megastructure" building controlled by a Corp or the City.</td></tr>
+            <tr><td>8</td><td>In the ruins of a deserted town or city taken over by Reclaimers.</td></tr>
+            <tr><td>9</td><td>In a Drift Nation (a floating offshore city) that is a meeting place for all kinds of people.</td></tr>
+            <tr><td>10</td><td>In a Corporate luxury "starscraper," high above the rest of the teeming rabble.</td></tr>
+        </table>
+    </div>
+
+    <!-- Family Crisis -->
+    <div class="section">
+        <h2>Your Family Crisis - CPR:Core p.50</h2>
+
+        <button>Roll 1D10</button>
+
+        <table>
+            <tr><th>Roll</th><th>Background</th></tr>
+            <tr><td>1</td><td>Your family lost everything through betrayal.</td></tr>
+            <tr><td>2</td><td>Your family lost everything through bad management.</td></tr>
+            <tr><td>3</td><td>Your family was exiled or otherwise driven from their original home/nation/Corporation.</td></tr>
+            <tr><td>4</td><td>Your family is imprisoned, and you alone escaped.</td></tr>
+            <tr><td>5</td><td>Your family vanished. You are the only remaining member.</td></tr>
+            <tr><td>6</td><td>Your family was killed, and you were the only survivor.</td></tr>
+            <tr><td>7</td><td>Your family is involved in a long-term conspiracy, organization, or association, such as a crime family or revolutionary group.</td></tr>
+            <tr><td>8</td><td>Your family was scattered to the winds due to misfortune.</td></tr>
+            <tr><td>9</td><td>Your family is cursed with a hereditary feud that has lasted for generations.</td></tr>
+            <tr><td>10</td><td>You are the inheritor of a family debt; you must honor this debt before moving on with your life.</td></tr>
+        </table>
+    </div>
+
+    <!-- Friends -->
+    <div class="section">
+        <h2>Your Friends - CPR:Core p.51</h2>
+
+        <button>Roll 1D10 - 7 (for number of Friends)</button>
+        <button>Roll 1D10 (for Friend's Relationship to You)</button>
+
+        <table>
+            <tr><th>Roll</th><th>Friend's Relationship to You</th></tr>
+            <tr><td>1</td><td>Like an older sibling to you.</td></tr>
+            <tr><td>2</td><td>Like a younger sibling to you</td></tr>
+            <tr><td>3</td><td>A teacher or mentor.</td></tr>
+            <tr><td>4</td><td>A partner or coworker.</td></tr>
+            <tr><td>5</td><td>A former lover.</td></tr>
+            <tr><td>6</td><td>An old enemy.</td></tr>
+            <tr><td>7</td><td>Like a parent to you.</td></tr>
+            <tr><td>8</td><td>An old childhood friend.</td></tr>
+            <tr><td>9</td><td>Someone you know from The Street.</td></tr>
+            <tr><td>10</td><td>Someone with a common interest or goal.</td></tr>
+        </table>
+    </div>
+
+    <!-- Enemies (Core) -->
+    <div class="section wide">
+        <h2>Your Enemies - CPR:Core p.51</h2>
+
+        <button>Roll 1D10 - 7 (for number of Enemies)</button>
+        <button>Roll 1D10 (for Enemy, What Caused it?, What Can They Throw at You?)</button>
+
+        <table>
+            <tr><th>Roll</th><th>Enemy</th><th>What Caused it? Who's been Wronged?</th><th>What Can They Throw at You?</th></tr>
+            <tr><td>1</td><td>Ex-friend</td><td>Caused the other to lose face or status.</td><td>Just themselves and even they won't go out of their way.</td></tr>
+            <tr><td>2</td><td>Ex-lover</td><td>Caused the loss of lover, friend, or relative</td><td>Just themselves.</td></tr>
+            <tr><td>3</td><td>Estranged relative</td><td>Caused a major public humiliation.</td><td>Just themselves and a close friend.</td></tr>
+            <tr><td>4</td><td>Childhood enemy</td><td>Accused the other of cowardice or some other major personal flaw.</td><td>Themselves and a few (1d6/2) friends.</td></tr>
+            <tr><td>5</td><td>Person working for you</td><td>Deserted or betrayed the other.</td><td>Themselves and a few (1d10/2) friends.</td></tr>
+            <tr><td>6</td><td>Person you work for</td><td>Turned down the other's offer of a job or romantic involvement.</td><td>An entire gang (at least 1d10 + 5 people).</td></tr>
+            <tr><td>7</td><td>Partner or coworker</td><td>You just don't like each other.</td><td>The local cops or other Lawmen.</td></tr>
+            <tr><td>8</td><td>Corporate exec</td><td>One of you was a romantic rival.</td><td>A powerful gang lord or small Corporation.</td></tr>
+            <tr><td>9</td><td>Government official</td><td>One of you was a business rival.</td><td>A powerful Corporation.</td></tr>
+            <tr><td>10</td><td>Boosterganger</td><td>One of you set the other up for a crime they didn't commit.</td><td>An entire city or government or agency.</td></tr>
+        </table>
+    </div>
+
+    <!-- Sweet Revenge -->
+    <div class="section">
+        <h2>Sweet Revenge - CPR:Core p.52</h2>
+
+        <button>Roll 1D10</button>
+
+        <table>
+            <tr><th>Roll</th><th>What are You/They Gonna do About it?</th></tr>
+            <tr><td>1-2</td><td>Avoid the scum.</td></tr>
+            <tr><td>3-4</td><td>Go into a murderous rage and try to physically rip their face off.</td></tr>
+            <tr><td>5-6</td><td>Backstab them indirectly.</td></tr>
+            <tr><td>7-8</td><td>Verbally attack them.</td></tr>
+            <tr><td>9</td><td>Set them up for a crime or other transgression they didn't commit.</td></tr>
+            <tr><td>10</td><td>Set out to murder or maim them.</td></tr>
+        </table>
+    </div>
+
+    <!-- Tragic Love Affairs -->
+    <div class="section">
+        <h2>Your Tragic Love Affair(s) - CPR:Core p.52</h2>
+
+        <button>Roll 1D10 - 7 (for number of Affairs)</button>
+        <button>Roll 1D10 (for What Happened?)</button>
+
+        <table>
+            <tr><th>Roll</th><th>What Happened?</th></tr>
+            <tr><td>1</td><td>Your lover died in an accident.</td></tr>
+            <tr><td>2</td><td>Your lover mysteriously vanished.</td></tr>
+            <tr><td>3</td><td>It just didn't work out.</td></tr>
+            <tr><td>4</td><td>A personal goal or vendetta came between you and your lover.</td></tr>
+            <tr><td>5</td><td>Your lover was kidnapped.</td></tr>
+            <tr><td>6</td><td>Your lover went insane or cyberpsycho</td></tr>
+            <tr><td>7</td><td>Your lover committed suicide.</td></tr>
+            <tr><td>8</td><td>Your lover was killed in a fight</td></tr>
+            <tr><td>9</td><td>A rival cut you out of the action.</td></tr>
+            <tr><td>10</td><td>Your lover is imprisoned or exiled.</td></tr>
+        </table>
+    </div>
+
+    <!-- Life Goals -->
+    <div class="section">
+        <h2>Your Life Goals - CPR:Core p.53</h2>
+
+        <button>Roll 1D10</button>
+
+        <table>
+            <tr><th>Roll</th><th>Life Goals</th></tr>
+            <tr><td>1</td><td>Get rid of a bad reputation.</td></tr>
+            <tr><td>2</td><td>Gain power and control.</td></tr>
+            <tr><td>3</td><td>Get off The Street no matter what it takes.</td></tr>
+            <tr><td>4</td><td>Cause pain and suffering to anyone who crosses you.</td></tr>
+            <tr><td>5</td><td>Live down your past life and try to forget it.</td></tr>
+            <tr><td>6</td><td>Hunt down those responsible for your miserable life and make them pay.</td></tr>
+            <tr><td>7</td><td>Get what's rightfully yours.</td></tr>
+            <tr><td>8</td><td>Save, if possible, anyone else involved in your background, like a lover, or family member.</td></tr>
+            <tr><td>9</td><td>Gain fame and recognition.</td></tr>
+            <tr><td>10</td><td>Become feared and respected.</td></tr>
+        </table>
+    </div>
+
+    <!-- Enemies (Easy Mode) -->
+    <div class="section wide">
+        <h2>Your Enemies - CPR:Easy Mode (ONLY) p.31</h2>
+
+        <button>Roll 1D10 - 7 (for number of Enemies)</button>
+        <button>Roll 1D10 (for Enemy, What Caused it?, and What's Gonna Happen?)</button>
+
+        <table>
+            <tr><th>Roll</th><th>Enemy</th><th>What Caused it? Who's been Wronged?</th><th>What's Gonna Happen?</th></tr>
+            <tr><td>1</td><td>Ex-friend</td><td>Caused the other to lose face or status.</td><td>Avoid the scum.</td></tr>
+            <tr><td>2</td><td>Ex-lover</td><td>Caused the loss of lover, friend, or relative</td><td>Avoid the scum.</td></tr>
+            <tr><td>3</td><td>Estranged relative</td><td>Caused a major public humiliation.</td><td>Go into a murderous rage and try to physically rip their face off.</td></tr>
+            <tr><td>4</td><td>Childhood enemy</td><td>Accused the other of cowardice or some other major personal flaw.</td><td>Go into a murderous rage and try to physically rip their face off.</td></tr>
+            <tr><td>5</td><td>Person working for you</td><td>Deserted or betrayed the other.</td><td>Backstab them indirectly.</td></tr>
+            <tr><td>6</td><td>Person you work for</td><td>Turned down the other's offer of a job or romantic involvement.</td><td>Backstab them indirectly.</td></tr>
+            <tr><td>7</td><td>Partner or coworker</td><td>You just don't like each other.</td><td>Verbally attack them.</td></tr>
+            <tr><td>8</td><td>Corporate exec</td><td>One of you was a romantic rival.</td><td>Verbally attack them.</td></tr>
+            <tr><td>9</td><td>Government official</td><td>One of you was a business rival.</td><td>Set them up for a crime or other transgression they didn't commit.</td></tr>
+            <tr><td>10</td><td>Boosterganger</td><td>One of you set the other up for a crime they didn't commit.</td><td>Set out to murder or maim them.</td></tr>
+        </table>
+    </div>
+
+</div>
+
+<!--
+<script>
+function roll(elementId, sides) {
+    const result = Math.floor(Math.random() * sides) + 1;
+    document.getElementById(elementId).innerHTML =
+        "Rolled: <strong>" + result + "</strong>";
+}
+</script>
+-->
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night City Terminal</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #05070b;
+      --panel: #0b1118;
+      --cyan: #00ffe1;
+      --red: #ff003c;
+      --yellow: #ffe600;
+      --grid: rgba(0,255,225,0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--cyan);
+      /* font-family: 'Share Tech Mono', monospace; */
+      font-family: 'Quantico', monospace;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      padding: 30px 16px;
+    }
+
+    /* Grid Overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 35px 35px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Scanlines */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.02) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      pointer-events: none;
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    .terminal {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(10,15,20,0.95);
+      border: 2px solid var(--cyan);
+      box-shadow:
+        0 0 10px var(--cyan),
+        0 0 30px rgba(0,255,225,0.4);
+      padding: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .terminal::before {
+      content: "NIGHT CITY ACCESS NODE";
+      position: absolute;
+      top: -14px;
+      left: 20px;
+      background: var(--bg);
+      color: var(--yellow);
+      padding: 0 10px;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .header {
+      border-left: 4px solid var(--red);
+      padding-left: 18px;
+      margin-bottom: 30px;
+    }
+
+    .header p {
+      color: var(--red);
+      letter-spacing: 3px;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      /* font-family: 'Orbitron', sans-serif; */
+      font-family: 'Quantico', sans-serif;
+      font-size: 3rem;
+      color: white;
+      text-shadow: 0 0 12px var(--cyan);
+      line-height: 1;
+    }
+
+    h1 span {
+      color: var(--cyan);
+    }
+
+    .status {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+      font-size: 13px;
+      color: rgba(0,255,225,0.7);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      display: inline-block;
+      margin-right: 8px;
+      box-shadow: 0 0 10px var(--cyan);
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: var(--cyan);
+      border: 1px solid rgba(0,255,225,0.3);
+      background: rgba(0,255,225,0.04);
+      padding: 18px;
+      transition: 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease;
+    }
+
+    .menu a:hover::before {
+      transform: scaleX(1);
+    }
+
+    .menu a:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan);
+      box-shadow: 0 0 15px rgba(0,255,225,0.35);
+      background: rgba(0,255,225,0.08);
+    }
+
+    .menu-title {
+      font-family: 'Orbitron', sans-serif;
+      color: red;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .menu-desc {
+      font-size: 13px;
+      color: rgba(0,255,225,0.65);
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 35px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(0,255,225,0.15);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: rgba(0,255,225,0.45);
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .terminal {
+        padding: 20px 16px;
+      }
+
+      .menu {
+        grid-template-columns: 1fr;
+      }
+
+      .status {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .terminal {
+        padding: 16px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal">
+
+    <div class="header">
+      <p>// SYSTEM ONLINE</p>
+      <h1>NIGHT CITY<br><span>TERMINAL</span></h1>
+    </div>
+
+    <div class="status">
+      <div><span class="dot"></span>UPLINK ACTIVE</div>
+      <div><span class="dot"></span>SECURITY ENABLED</div>
+      <div><span class="dot"></span>DATAPOOL CONNECTED</div>
+    </div>
+
+    <div class="menu">
+
+      <a href="rpg_calendar.html" target="_blank">
+        <div class="menu-title">TTRPG Calendar</div>
+        <div class="menu-desc">Encrypted files and archived records.</div>
+      </a>
+      <a href="CPR-Lifepath.html" target="_blank">
+        <div class="menu-title">Lifepath Generator</div>
+        <div class="menu-desc">Encrypted files and archived records.</div>
+      </a>
+
+      <a href="https://cyberpunkred.com" target="_blank">
+        <div class="menu-title">Cyberpunk Red Companion</div>
+        <div class="menu-desc">External systems and remote connections.</div>
+      </a>
+      <a href="https://cyberpunk.fandom.com/wiki/Cyberpunk_RED" target="_blank">
+        <div class="menu-title">Cyberpunk Red Wiki</div>
+        <div class="menu-desc">External systems and remote connections.</div>
+      </a>
+      <a href="https://rtalsoriangames.com/downloadable-content/" target="_blank">
+        <div class="menu-title">R. Talsorian Free Content</div>
+        <div class="menu-desc">External systems and remote connections.</div>
+      </a>
+<!--
+      <a href="Cyberpunk_Neon-The_Homebrewery.pdf" target="_blank">
+        <div class="menu-title">Cyberpunk Neon Homebrewery Reference (.pdf)</div>
+        <div class="menu-desc">Encrypted files and archived records.</div>
+      </a>
+-->
+      <a href="https://homebrewery.naturalcrit.com/share/GTfdEcccNB5K" target="_blank">
+        <div class="menu-title">Cyberpunk Neon Homebrewery Reference</div>
+        <div class="menu-desc">External systems and remote connections.</div>
+      </a>
+      <a href="https://nightcity.io" target="_blank">
+        <div class="menu-title">Night City Map</div>
+        <div class="menu-desc">External systems and remote connections.</div>
+      </a>
+    </div>
+
+    <div class="footer">
+      <span>NC.TERM v1.1</span>
+      <span>UNAUTHORIZED ACCESS LOGGED</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
