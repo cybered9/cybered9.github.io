@@ -272,6 +272,10 @@
         <div class="menu-title">TTRPG Calendar</div>
         <div class="menu-desc">Encrypted files and archived records.</div>
       </a>
+      <a href="CPR-Lifepath.html" target="_blank">
+        <div class="menu-title">Lifepath Generator</div>
+        <div class="menu-desc">Encrypted files and archived records.</div>
+      </a>
 
       <a href="https://cyberpunkred.com" target="_blank">
         <div class="menu-title">Cyberpunk Red Companion</div>
