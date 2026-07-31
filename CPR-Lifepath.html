@@ -81,31 +81,122 @@
         .section.wide {
             grid-column: 1 / -1;
         }
+
+
+      /* Added animated dice roller 07/31/26 */
+
+.dice-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px auto 35px;
+    padding: 25px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.d10 {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(145deg,#ff3333,#990000);
+    clip-path: polygon(
+        50% 0%, 82% 18%, 100% 50%, 82% 82%,
+        50% 100%, 18% 82%, 0% 50%, 18% 18%
+    );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:48px;
+    font-weight:bold;
+    font-family:Arial,sans-serif;
+    text-shadow:0 0 10px #fff;
+    box-shadow:
+        0 0 15px #ff0000,
+        inset 0 0 20px rgba(255,255,255,.25);
+    transition:transform .15s;
+}
+
+.d10.rolling{
+    animation:rollDice .8s ease-in-out;
+}
+
+@keyframes rollDice{
+
+    0%{
+        transform:rotate(0deg) scale(1);
+    }
+
+    15%{
+        transform:rotate(220deg) scale(.85);
+    }
+
+    30%{
+        transform:rotate(500deg) scale(1.15);
+    }
+
+    45%{
+        transform:rotate(820deg) scale(.9);
+    }
+
+    60%{
+        transform:rotate(1120deg) scale(1.1);
+    }
+
+    80%{
+        transform:rotate(1450deg) scale(.95);
+    }
+
+    100%{
+        transform:rotate(1800deg) scale(1);
+    }
+}
+
+#diceResult{
+    font-size:28px;
+    color:#00e5ff;
+    font-weight:bold;
+}
+
+
+
     </style>
+
 </head>
 
 <body>
 
 <h1>Cyberpunk RED Lifepath Reference</h1>
 
+<!-- Add animated dice roller 07/31/26 -->
+
+<div class="dice-panel">
+
+    <div id="d10" class="d10">
+        10
+    </div>
+
+    <div>
+
+        <button onclick="rollD10()">
+            🎲 Roll D10
+        </button>
+
+        <div id="diceResult">
+            Ready
+        </div>
+
+    </div>
+
+</div>
+
+
 <p>
     Use this page as a quick reference while creating your character.
     Roll the dice and reference the tables below.
 </p>
-
-<div class="section">
-    <h2>Quick Dice Roller</h2>
-
-    <select id="die">
-        <option value="10" selected>d10</option>
-    </select>
-
-    <button onclick="roll('quickResult', Number(document.getElementById('die').value))">
-        Roll
-    </button>
-
-    <div id="quickResult" class="result"></div>
-</div>
 
 <div class="grid">
 
@@ -411,6 +502,40 @@
     </div>
 
 </div>
+
+<!-- Add animated dice roller 07/31/26 -->
+<script>
+
+function rollD10(){
+
+    const die=document.getElementById("d10");
+    const result=document.getElementById("diceResult");
+
+    die.classList.add("rolling");
+
+    const interval=setInterval(function(){
+
+        die.textContent=Math.floor(Math.random()*10)+1;
+
+    },60);
+
+    setTimeout(function(){
+
+        clearInterval(interval);
+
+        const roll=Math.floor(Math.random()*10)+1;
+
+        die.textContent=roll;
+
+        result.innerHTML="Result: <strong>"+roll+"</strong>";
+
+        die.classList.remove("rolling");
+
+    },800);
+
+}
+
+</script>
 
 </body>
 </html>
