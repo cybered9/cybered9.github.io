@@ -99,6 +99,10 @@
     <div class="section wide">
         <h2>Cultural Origins - CPR:Core p.45</h2>
 
+        <!--   <button>Roll 1D10</button> -->
+
+        <button onclick="roll('culture', 10)">Roll 1D10</button>
+      <div id="culture" class="result"></div>
 
         <table>
             <tr><th>Roll</th><th>Your Cultural Origin</th><th>Language You Might Know (pick one)</th></tr>
@@ -119,6 +123,10 @@
     <div class="section">
         <h2>Your Personality - CPR:Core p.46</h2>
 
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('personality', 10)">Roll 1D10</button> -->
+        <!-- <div id="personality" class="result"></div> -->
+
         <table>
             <tr><th>Roll</th><th>What Are You Like?</th></tr>
             <tr><td>1</td><td>Shy and secretive</td></tr>
@@ -137,6 +145,10 @@
     <!-- Clothing Style -->
     <div class="section wide">
         <h2>Dress and Personal Style - CPR:Core p.47</h2>
+
+        <button>Roll 1D10 (for each column)</button>
+        <!-- <button onclick="roll('clothing', 10)">Roll 1D10</button> -->
+        <!-- <div id="clothing" class="result"></div> -->
 
         <table>
             <tr><th>Roll</th><th>Clothing Style</th><th>Hairstyle</th></tr>
@@ -157,6 +169,8 @@
     <div class="section">
         <h2>Dress and Personal Style - CPR:Core p.47</h2>
 
+        <button>Roll 1D10</button>
+
         <table>
             <tr><th>Roll</th><th>Affectation You Are Never Without</th></tr>
             <tr><td>1</td><td>Tattoos</td></tr>
@@ -175,6 +189,10 @@
     <!-- Motivations and Relationships -->
     <div class="section wide">
         <h2>Your Motivations and Relationships - CPR:Core p.48</h2>
+
+        <button>Roll 1D10 (for each column)</button>
+        <!-- <button onclick="roll('motivation', 10)">Roll 1D10</button> -->
+        <!-- <div id="motivation" class="result"></div> -->
 
         <table>
             <tr><th>Roll</th><th>What Do You Value Most?</th><th>How Do You Feel About Most People?</th></tr>
@@ -195,6 +213,10 @@
     <div class="section">
         <h2>Things You Value the Most? - CPR:Core p.48</h2>
 
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('motivation', 10)">Roll 1D10</button> -->
+        <!-- <div id="motivation" class="result"></div> -->
+
         <table>
             <tr><th>Roll</th><th>Most Valued Person in Your Life?</th></tr>
             <tr><td>1</td><td>A parent</td></tr>
@@ -213,6 +235,10 @@
     <!-- Most Valued Possession -->
     <div class="section">
         <h2>Things You Value the Most? - CPR:Core p.48</h2>
+
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('motivation', 10)">Roll 1D10</button> -->
+        <!-- <div id="motivation" class="result"></div> -->
 
         <table>
             <tr><th>Roll</th><th>Most Valued Possession You Own?</th></tr>
@@ -233,6 +259,10 @@
     <div class="section">
         <h2>Your Original Family Background - CPR:Core p.49</h2>
 
+        <button>Roll 1D10</button>
+        <!-- <button onclick="roll('family', 10)">Roll 1D10</button> -->
+        <!-- <div id="family" class="result"></div> -->
+
         <table>
             <tr><th>Roll</th><th>Original Background (see CPR:Core for detailed descriptions)</th></tr>
             <tr><td>1</td><td>Corporate Execs</td></tr>
@@ -251,6 +281,8 @@
     <!-- Childhood Environment -->
     <div class="section">
         <h2>Your Environment - CPR:Core p.50</h2>
+
+        <button>Roll 1D10</button>
 
         <table>
             <tr><th>Roll</th><th>Childhood Environment</th></tr>
@@ -271,6 +303,8 @@
     <div class="section">
         <h2>Your Family Crisis - CPR:Core p.50</h2>
 
+        <button>Roll 1D10</button>
+
         <table>
             <tr><th>Roll</th><th>Background</th></tr>
             <tr><td>1</td><td>Your family lost everything through betrayal.</td></tr>
@@ -289,6 +323,9 @@
     <!-- Friends -->
     <div class="section">
         <h2>Your Friends - CPR:Core p.51</h2>
+
+        <button>Roll 1D10 - 7 (for number of Friends)</button>
+        <button>Roll 1D10 (for Friend's Relationship to You)</button>
 
         <table>
             <tr><th>Roll</th><th>Friend's Relationship to You</th></tr>
@@ -309,6 +346,9 @@
     <div class="section wide">
         <h2>Your Enemies - CPR:Core p.51</h2>
 
+        <button>Roll 1D10 - 7 (for number of Enemies)</button>
+        <button>Roll 1D10 (for Enemy, What Caused it?, What Can They Throw at You?)</button>
+
         <table>
             <tr><th>Roll</th><th>Enemy</th><th>What Caused it? Who's been Wronged?</th><th>What Can They Throw at You?</th></tr>
             <tr><td>1</td><td>Ex-friend</td><td>Caused the other to lose face or status.</td><td>Just themselves and even they won't go out of their way.</td></tr>
@@ -328,6 +368,8 @@
     <div class="section">
         <h2>Sweet Revenge - CPR:Core p.52</h2>
 
+        <button>Roll 1D10</button>
+
         <table>
             <tr><th>Roll</th><th>What are You/They Gonna do About it?</th></tr>
             <tr><td>1-2</td><td>Avoid the scum.</td></tr>
@@ -342,6 +384,9 @@
     <!-- Tragic Love Affairs -->
     <div class="section">
         <h2>Your Tragic Love Affair(s) - CPR:Core p.52</h2>
+
+        <button>Roll 1D10 - 7 (for number of Affairs)</button>
+        <button>Roll 1D10 (for What Happened?)</button>
 
         <table>
             <tr><th>Roll</th><th>What Happened?</th></tr>
@@ -362,6 +407,8 @@
     <div class="section">
         <h2>Your Life Goals - CPR:Core p.53</h2>
 
+        <button>Roll 1D10</button>
+
         <table>
             <tr><th>Roll</th><th>Life Goals</th></tr>
             <tr><td>1</td><td>Get rid of a bad reputation.</td></tr>
@@ -381,6 +428,9 @@
     <div class="section wide">
         <h2>Your Enemies - CPR:Easy Mode (ONLY) p.31</h2>
 
+        <button>Roll 1D10 - 7 (for number of Enemies)</button>
+        <button>Roll 1D10 (for Enemy, What Caused it?, and What's Gonna Happen?)</button>
+
         <table>
             <tr><th>Roll</th><th>Enemy</th><th>What Caused it? Who's been Wronged?</th><th>What's Gonna Happen?</th></tr>
             <tr><td>1</td><td>Ex-friend</td><td>Caused the other to lose face or status.</td><td>Avoid the scum.</td></tr>
@@ -397,6 +447,14 @@
     </div>
 
 </div>
+
+<script>
+function roll(elementId, sides) {
+    const result = Math.floor(Math.random() * sides) + 1;
+    document.getElementById(elementId).innerHTML =
+        "Rolled: <strong>" + result + "</strong>";
+}
+</script>
 
 </body>
 </html>
